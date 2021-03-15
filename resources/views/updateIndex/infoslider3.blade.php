@@ -25,7 +25,7 @@
   <a href="{{route('home')}}" class="d-none d-sm-inline-block btn btn-primary btn-icon-split shadow-sm"><span class="icon text-white-50"><i class="fas fa-arrow-left fa-sm "></i></span><span class="text"> &nbsp;Secciones<span></a>
 </div>
   <div class="row justify-content-center">
-    <div class="col-md-12 d-none d-sm-none d-md-none d-lg-block"><iframe class="" src="/#infoSlider3"  width="100%" height="450"></iframe></div>
+    <div class="col-md-12 d-none d-sm-none d-md-none d-lg-block"></div>
     <div class="col-md-12">
       <!-- LINE/SPACE -->
       @foreach($orders as $item)

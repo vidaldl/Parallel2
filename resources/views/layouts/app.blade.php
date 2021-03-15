@@ -38,10 +38,10 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon">
+            <img src="{{asset('img/parallel.png')}}" alt="Parallel Logo"style="width: 60%">
         </div>
-        <div class="sidebar-brand-text mx-3">Parallel <sup>Dashboard</sup></div>
+{{--        <div class="sidebar-brand-text mx-3">Parallel <sup>Dashboard</sup></div>--}}
       </a>
 
       <!-- Divider -->
@@ -179,6 +179,10 @@
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
+
+            <a class="btn btn-info" href="{{route('index')}}" target="_blank">
+                <i class="fas fa-eye m-1"></i> View Site
+            </a>
 
 
           <!-- Topbar Navbar -->

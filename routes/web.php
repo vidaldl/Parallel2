@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
 Route::get('/about', 'IndexController@about');
 
 
@@ -124,9 +124,9 @@ Route::get('/checkout/error', 'CheckoutController@error')->name('checkout.error'
 
 
 //Checkout Paypal ================================== Checkout Paypal ===================================
-Route::get('paypal/express-checkout', 'PaypalController@expressCheckout')->name('paypal.express-checkout');
-Route::get('paypal/express-checkout-success', 'PaypalController@expressCheckoutSuccess');
-Route::post('paypal/notify', 'PaypalController@notify');
+Route::get('paypal/express-checkout', 'PayPalController@expressCheckout')->name('paypal.express-checkout');
+Route::get('paypal/express-checkout-success', 'PayPalController@expressCheckoutSuccess');
+Route::post('paypal/notify', 'PayPalController@notify');
 
 
 //Receipt Info ================================== Receipt Info ===================================

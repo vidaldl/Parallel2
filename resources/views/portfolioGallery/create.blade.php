@@ -527,11 +527,11 @@ Dropzone.options.slide = {
    init: function () {
       this.on("complete", function (file) {
         if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
-          // setTimeout(
-          //   function()
-          //   {
-          //     location.reload();
-          //   }, 1500);
+          setTimeout(
+            function()
+            {
+              location.reload();
+            }, 1500);
         }
       });
     }
@@ -559,7 +559,7 @@ Dropzone.options.slide = {
                 // Get the canvas with image data from Cropper.js
                  var canvas = cropper.getCroppedCanvas({
                    width: 1200,
-                   height: 900
+                   height: 720
                  });
                  // Turn the canvas into a Blob (file object without a name)
                  canvas.toBlob(function(blob) {

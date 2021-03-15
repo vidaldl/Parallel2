@@ -98,7 +98,7 @@ class CheckoutController extends Controller
               $method,
               $cardtype,
               $cardlast4,
-              $receipt_info,
+              $receipt_info
             ));
 
             $data = array(

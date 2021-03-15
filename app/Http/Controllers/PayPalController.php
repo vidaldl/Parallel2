@@ -338,7 +338,7 @@ public function expressCheckoutSuccess(Request $request) {
         $method,
         $cardtype,
         $cardlast4,
-        $receipt_info,
+        $receipt_info
       ));
 
       //Destroy Cart
