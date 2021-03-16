@@ -85,21 +85,21 @@ class CheckoutController extends Controller
 
 
           if($charge->status == "succeeded") {
-            Mail::to($email)->send(new \App\Mail\PurchasedSuccessful(
-              $charge,
-              $email,
-              $date,
-              $receipt,
-              $name,
-              $items,
-              $subtotal,
-              $tax,
-              $total,
-              $method,
-              $cardtype,
-              $cardlast4,
-              $receipt_info
-            ));
+//            Mail::to($email)->send(new \App\Mail\PurchasedSuccessful(
+//              $charge,
+//              $email,
+//              $date,
+//              $receipt,
+//              $name,
+//              $items,
+//              $subtotal,
+//              $tax,
+//              $total,
+//              $method,
+//              $cardtype,
+//              $cardlast4,
+//              $receipt_info
+//            ));
 
             $data = array(
               'receipt_number' => $receipt,
