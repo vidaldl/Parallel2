@@ -14,7 +14,7 @@ class PShopController extends Controller
 
   public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('PDFreceipt');
     }
 
 
@@ -38,7 +38,7 @@ class PShopController extends Controller
 
      // return $pdf->download('factura.pdf');
 
-     return $pdf->stream('factura.pdf', array("Attachment" => false));
+     return $pdf->stream('factura.pdf', array("Attachment" => true));
 
    }
 }

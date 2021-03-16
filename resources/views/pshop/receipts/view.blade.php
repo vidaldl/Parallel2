@@ -107,7 +107,8 @@
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="{{public_path() . '/storage/' . $receipt_info->image}}" style="width:300px;">
+                                <img src="{{asset('storage/' . $receipt_info->image)}}" style="width:300px;">
+
                             </td>
 
                             <td>

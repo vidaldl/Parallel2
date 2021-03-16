@@ -22,6 +22,8 @@
         </div>
         <h3 class="center mt-3">Payment Successful</h3>
         <p class="center">Su pago ha sido exitoso y está siendo procesado, en poco tiempo recibirá un email confirmando su compra.</p>
+
+      <p class="center">Normally You would receive an email. But as this is a Demo <a href="{{route('receipt.pdf', $receipt->id)}}" target="_blank">here</a> you can see your receipt</p>
       </div>
     </div>
 

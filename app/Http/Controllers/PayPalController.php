@@ -329,21 +329,21 @@ public function expressCheckoutSuccess(Request $request) {
       $cardlast4 = NULL;
       $receipt_info = ReceiptInfo::find(1);
 
-      Mail::to($email)->send(new \App\Mail\PurchasedSuccessful(
-        $charge,
-        $email,
-        $date,
-        $receipt,
-        $name,
-        $items,
-        $subtotal,
-        $tax,
-        $total,
-        $method,
-        $cardtype,
-        $cardlast4,
-        $receipt_info
-      ));
+//      Mail::to($email)->send(new \App\Mail\PurchasedSuccessful(
+//        $charge,
+//        $email,
+//        $date,
+//        $receipt,
+//        $name,
+//        $items,
+//        $subtotal,
+//        $tax,
+//        $total,
+//        $method,
+//        $cardtype,
+//        $cardlast4,
+//        $receipt_info
+//      ));
 
       //Destroy Cart
       Cart::destroy();
