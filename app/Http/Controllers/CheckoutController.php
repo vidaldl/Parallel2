@@ -136,7 +136,7 @@ class CheckoutController extends Controller
 
     }
 
-    public function success($id) {
+    public function success($invoice_id) {
       return view('shop.success')
       ->with('orders', Order::all())
       ->with('menu_item', MenuItem::all())
@@ -146,7 +146,7 @@ class CheckoutController extends Controller
       ->with('contenidosectionfooters', ContenidoSectionFooter::all())
       ->with('footer_links', FooterLink::all())
       ->with('shop_items', ShopItem::all())
-      ->with('receipt', Receipt::find($id));
+      ->with('receipt', Receipt::where('receipt_number', $invoice_id)->firstOrFail());
     }
 
     public function canceled() {

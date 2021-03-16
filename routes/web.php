@@ -118,7 +118,7 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 Route::post('/checkout/pay', 'CheckoutController@pay')->name('checkout.pay');
 
 //Checkout Conditions ================================== Checkout Conditions ===================================
-Route::get('/checkout/success/{id}', 'CheckoutController@success')->name('checkout.success');
+Route::get('/checkout/success/{invoice_id}', 'CheckoutController@success')->name('checkout.success');
 Route::get('/checkout/canceled', 'CheckoutController@canceled')->name('checkout.canceled');
 Route::get('/checkout/error', 'CheckoutController@error')->name('checkout.error');
 

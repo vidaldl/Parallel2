@@ -26,10 +26,11 @@ class PayPalController extends Controller
     $recurring = $request->input('recurring', false) ? true : false;
 
     // get new invoice id
-    $invoice_id = Receipt::count() + 1;
+    $invoice_id = Receipt::count() + rand(1, 500000);
+
 
     // Get the cart data
-    // $cart = $this->getCart($recurring, $invoice_id);
+//     $cart = $this->getCart($recurring, $invoice_id);
 
     $data = [];
 
@@ -82,6 +83,7 @@ class PayPalController extends Controller
 
       $data['total'] = Cart::total(null,null,'');
 
+
     }
 
 
@@ -96,12 +98,14 @@ class PayPalController extends Controller
     if (!$response['paypal_link']) {
       return redirect('/')->with(['code' => 'danger', 'message' => 'Something went wrong with PayPal']);
       // For the actual error message dump out $response and see what's in there
+
     }
 
     // redirect to paypal
     // after payment is done paypal
     // will redirect us back to $this->expressCheckoutSuccess
     return redirect($response['paypal_link']);
+
   }
 
 private function getCart($recurring, $invoice_id)
@@ -201,7 +205,7 @@ public function expressCheckoutSuccess(Request $request) {
     $items = Cart::content();
 
 
-    $receiptlast = Receipt::find($invoice_id);
+    $receiptlast = Receipt::where('receipt_number', $invoice_id)->firstOrFail();
     foreach($items as $item) {
       $receiptlast->shop_items()->attach($item->model, ['item_qty' => $item->qty]);
     }
@@ -294,7 +298,7 @@ public function expressCheckoutSuccess(Request $request) {
     }
 
     // find invoice by id
-    $invoice = Receipt::find($invoice_id);
+    $invoice = Receipt::where('receipt_number', $invoice_id)->firstOrFail();
 
     // set invoice status
     $invoice->payment_status = $status;

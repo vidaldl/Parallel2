@@ -183,7 +183,13 @@
           <h4>PayPal</h4>
           <a href="{{route('paypal.express-checkout')}}" style="color:white;" class="button button-rounded button-reveal button-xlarge"><i class="fab fa-paypal"></i><span>Paypal</span></a>
           <!-- ['recurring' => true] -->
-
+            <div class="h6">
+                For demo use:
+                <ul>
+                    <li>Email: sb-437wxt903066@personal.example.com</li>
+                    <li>Password: 4=?NQ4Gw</li>
+                </ul>
+            </div>
         </div>
 
         <div class="col-lg-6 clearfix">
@@ -216,13 +222,22 @@
                 <input type="hidden" name="total" value="{{Cart::total()}}">
                 <label for="card-element">
                   Credito o Débito
+
                 </label>
+
                 <div id="card-element">
                   <!-- A Stripe Element will be inserted here. -->
                 </div>
 
                 <!-- Used to display form errors. -->
                 <div id="card-errors" role="alert"></div>
+                  <div class="small mt-1">
+                      For Demo Use:
+                      <ul>
+                          <li>Card: 4242 4242 4242 4242</li>
+                          <li>Exp. date, CVC and Zip Code use anything</li>
+                      </ul>
+                  </div>
               </div>
             </div>
 

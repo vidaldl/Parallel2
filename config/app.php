@@ -234,6 +234,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         //DomPDF
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        //Paypal
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class
     ],
 
 ];
