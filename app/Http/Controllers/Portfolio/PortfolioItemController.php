@@ -309,6 +309,7 @@ class PortfolioItemController extends Controller
     public function trashed() {
       $trashed = PortfolioItem::onlyTrashed()->get();
       return view('portfolio.items.index')
+      ->with('portfolio_section', PortfolioSection::all())
       ->with('orders', Order::all())
       ->with('portfolioItems', $trashed);
     }
