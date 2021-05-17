@@ -187,11 +187,13 @@
                         <select name="file" id="file">
                           <option value="">--Seleccionar Archivo--</option>
                           @foreach($files as $file)
+                          @if(isset($portfolioItem))
                             @if($portfolioItem->logo_link_address == 'storage/' . $file->file)
                               <option value="{{'storage/' . $file->file}}" selected>{{$file->display_name}}</option>
                             @elseif($portfolioItem->logo_link_address != 'storage/' . $file->file)
                               <option value="{{'storage/' . $file->file}}">{{$file->display_name}}</option>
                             @endif
+                           @endif
                           @endforeach
                         </select>
                       </div>
