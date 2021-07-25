@@ -41,7 +41,7 @@
 					@endif
 					<h3>{{ $servicio->title }}</h3>
 				@endif
-        <p class="short" style="color: #5c5c5c;"><strong>{!! $servicio->contenido !!}</strong></p>
+        <p class="short" style="color: #5c5c5c; "><strong style="color: #333;">{!! $servicio->contenido !!}</strong></p>
       </div>
     </div>
 		@endforeach
